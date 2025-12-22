@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Lengkap - Nexus Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent border-bottom border-secondary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">NEXUS.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produk.html">Katalog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 pt-5">
+        <h2 class="text-center fw-bold mb-4 mt-4 text-primary">Katalog Produk</h2>
+
+        <div class="text-center mb-5">
+            <div class="btn-group flex-wrap shadow" role="group">
+                <button onclick="filter('all')" class="btn btn-outline-primary active">Semua</button>
+                <button onclick="filter('laptop')" class="btn btn-outline-primary">Laptop</button>
+                <button onclick="filter('hp')" class="btn btn-outline-primary">HP</button>
+                <button onclick="filter('gaming')" class="btn btn-outline-primary">Gaming</button>
+                <button onclick="filter('elektronik')" class="btn btn-outline-primary">Elektronik</button>
+            </div>
+        </div>
+
+        <div class="row g-4" id="produk-container">
+            
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="hp">
+                <div class="card">
+                    <img src="https://images.samsung.com/id/smartphones/galaxy-s25-ultra/buy/product_color_silverBlue_PC.png" class="card-img-top" alt="Samsung" 
+                         onclick="showDetail('Samsung S25 Ultra', 'Rp 12.500.000', 'https://images.samsung.com/id/smartphones/galaxy-s25-ultra/buy/product_color_silverBlue_PC.png', 'Chipset Snapdragon 8 Gen 3, Kamera 200MP, Layar Dynamic AMOLED 2X 120Hz. Garansi Resmi SEIN.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung S25 Ultra</h5>
+                        <p class="card-text-price">Rp 12.500.000</p>
+                        <button onclick="pesanWA('Samsung S25 Ultra')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="hp">
+                <div class="card">
+                    <img src="https://www.apple.com/id/iphone-17-pro/images/overview/highlights/highlights_design_endframe__flnga0hibmeu_large.jpg" class="card-img-top" alt="iPhone"
+                         onclick="showDetail('iPhone 17 Pro Max', 'Rp 16.000.000', 'https://www.apple.com/id/iphone-17-pro/images/overview/highlights/highlights_design_endframe__flnga0hibmeu_large.jpg', 'Chipset A18 Pro Bionic, Titanium Body, Action Button, USB-C. Garansi Resmi iBox.')">
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 17 Pro Max</h5>
+                        <p class="card-text-price">Rp 16.000.000</p>
+                        <button onclick="pesanWA('iPhone 17 Pro Max')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="hp">
+                <div class="card">
+                    <img src="https://akcdn.detik.net.id/visual/2024/02/26/xiaomi-14-ultra_169.png?w=1200" class="card-img-top" alt="Xiaomi"
+                         onclick="showDetail('Xiaomi 14 Ultra', 'Rp 11.000.000', 'https://akcdn.detik.net.id/visual/2024/02/26/xiaomi-14-ultra_169.png?w=1200', 'Kamera Leica Summilux, Snapdragon 8 Gen 3, Fast Charging 90W. Garansi Resmi.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Xiaomi 14 Ultra</h5>
+                        <p class="card-text-price">Rp 11.000.000</p>
+                        <button onclick="pesanWA('Xiaomi 14 Ultra')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="hp">
+                <div class="card">
+                    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9P9PThumbnail_16x9_Opt2_2.width-1300.jpg" class="card-img-top" alt="Pixel"
+                         onclick="showDetail('Google Pixel 9', 'Rp 14.000.000', 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9P9PThumbnail_16x9_Opt2_2.width-1300.jpg', 'Google Tensor G4, Kamera AI Terbaik, Stock Android 14. Garansi Internasional.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Pixel 9</h5>
+                        <p class="card-text-price">Rp 14.000.000</p>
+                        <button onclick="pesanWA('Google Pixel 9')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="hp">
+                <div class="card">
+                    <img src="https://www.oppo.com/content/dam/oppo/en/mkt/newsroom/press/oppo-hasselblad-hypertone-camera-system/9-800x450.jpg?" class="card-img-top" alt="Oppo"
+                         onclick="showDetail('Oppo Find X7', 'Rp 13.000.000', 'https://www.oppo.com/content/dam/oppo/en/mkt/newsroom/press/oppo-hasselblad-hypertone-camera-system/9-800x450.jpg?', 'Kamera Hasselblad, Layar LTPO 120Hz, Desain Kulit Premium. Garansi Resmi.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Oppo Find X7</h5>
+                        <p class="card-text-price">Rp 13.000.000</p>
+                        <button onclick="pesanWA('Oppo Find X7')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="laptop">
+                <div class="card">
+                    <img src="https://www.jagatreview.com/wp-content/uploads/2023/06/macbook-air-15.webp" class="card-img-top" alt="MacBook"
+                         onclick="showDetail('MacBook Air M2', 'Rp 15.000.000', 'https://www.jagatreview.com/wp-content/uploads/2023/06/macbook-air-15.webp', 'Chip Apple M2, RAM 8GB, SSD 256GB, Layar Liquid Retina. Garansi iBox.')">
+                    <div class="card-body">
+                        <h5 class="card-title">MacBook Air M2</h5>
+                        <p class="card-text-price">Rp 15.000.000</p>
+                        <button onclick="pesanWA('MacBook Air M2')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="laptop">
+                <div class="card">
+                    <img src="https://asset-2.tstatic.net/shopping/foto/bank/images/ilsutrasi-kelebihan-dell-xps-13.jpg" class="card-img-top" alt="Dell"
+                         onclick="showDetail('Dell XPS 13', 'Rp 19.000.000', 'https://asset-2.tstatic.net/shopping/foto/bank/images/ilsutrasi-kelebihan-dell-xps-13.jpg', 'Intel Core i7 Gen 13, Layar InfinityEdge 4K, Body Carbon Fiber. Windows 11 Original.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Dell XPS 13</h5>
+                        <p class="card-text-price">Rp 19.000.000</p>
+                        <button onclick="pesanWA('Dell XPS 13')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="laptop">
+                <div class="card">
+                    <img src="https://asset.kompas.com/crops/GkhuLJXyhfzxxzVCTqKWqcnqIV0=/0x37:1426x987/1200x800/data/photo/2024/05/21/664c06c263edf.jpg" class="card-img-top" alt="Surface"
+                         onclick="showDetail('Microsoft Surface', 'Rp 17.500.000', 'https://asset.kompas.com/crops/GkhuLJXyhfzxxzVCTqKWqcnqIV0=/0x37:1426x987/1200x800/data/photo/2024/05/21/664c06c263edf.jpg', 'Laptop 2-in-1, Layar Sentuh PixelSense, Ringan & Tipis. Cocok untuk profesional.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft Surface</h5>
+                        <p class="card-text-price">Rp 17.500.000</p>
+                        <button onclick="pesanWA('Surface Laptop')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="laptop">
+                <div class="card">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1601536990/zejizfiiafmzyl0pi2rg.jpg" class="card-img-top" alt="Huawei"
+                         onclick="showDetail('Huawei MateBook', 'Rp 14.000.000', 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1601536990/zejizfiiafmzyl0pi2rg.jpg', 'Layar FullView 2K, Integrasi Super Device, Body Metal.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Huawei MateBook</h5>
+                        <p class="card-text-price">Rp 14.000.000</p>
+                        <button onclick="pesanWA('Huawei MateBook')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="laptop">
+                <div class="card">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/ff090834-6fef-43b5-be5a-95d3c828d15d/" class="card-img-top" alt="Asus"
+                         onclick="showDetail('Asus ZenBook Duo', 'Rp 23.000.000', 'https://assets.goal.com/images/v3/blt9033dcb9b28c66cc/f61138da5e0a3af7c7c83b6166f1cb03dbfee30f.jpg?auto=webp&format=pjpg&width=3840&quality=60', 'Dua Layar OLED 14 Inci, Intel Core Ultra 9, Multitasking Juara.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Asus ZenBook Duo</h5>
+                        <p class="card-text-price">Rp 23.000.000</p>
+                        <button onclick="pesanWA('Asus Zenbook')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="gaming">
+                <div class="card">
+                    <img src="https://mmc.tirto.id/image/otf/720x0,q80/2025/01/17/nintendo-switch-2_ratio-16x9.jpg" class="card-img-top" alt="Switch"
+                         onclick="showDetail('Nintendo Switch 2', 'Rp 8.000.000', 'https://mmc.tirto.id/image/otf/720x0,q80/2025/01/17/nintendo-switch-2_ratio-16x9.jpg', 'Konsol Hybrid terbaru, Support 4K Docking, Joy-Con Baru.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Nintendo Switch 2</h5>
+                        <p class="card-text-price">Rp 8.000.000</p>
+                        <button onclick="pesanWA('Nintendo Switch 2')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="gaming">
+                <div class="card">
+                    <img src="https://cms-assets.xboxservices.com/assets/34/4d/344d0e61-f7d2-475f-9e88-2f1bbedb3d5f.png?n=HeroAndImageCard-large-l-794x447-16x9-01.png" class="card-img-top" alt="Xbox"
+                         onclick="showDetail('Xbox Series X', 'Rp 5.500.000', 'https://cms-assets.xboxservices.com/assets/34/4d/344d0e61-f7d2-475f-9e88-2f1bbedb3d5f.png?n=HeroAndImageCard-large-l-794x447-16x9-01.png', 'Konsol Terkuat Microsoft, 12 Teraflops, Support Game Pass Ultimate.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Xbox Series X</h5>
+                        <p class="card-text-price">Rp 5.500.000</p>
+                        <button onclick="pesanWA('Xbox Series X')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="gaming">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTclH-N7VDBVBPjXeTluyILLpHWglG7OXBmnRzd3jfK8Vl_TTYzZqQjnrhp4ubIa9iylZsFgKvKgnuM6KV-MGuPLaFp1QNkaEP3_rBqlVUshaSjEYfzIRupv3Aq_ezNdBSFY2k4PDU&usqp=CAc" class="card-img-top" alt="Monitor"
+                         onclick="showDetail('Monitor LG OLED', 'Rp 30.000.000', 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTclH-N7VDBVBPjXeTluyILLpHWglG7OXBmnRzd3jfK8Vl_TTYzZqQjnrhp4ubIa9iylZsFgKvKgnuM6KV-MGuPLaFp1QNkaEP3_rBqlVUshaSjEYfzIRupv3Aq_ezNdBSFY2k4PDU&usqp=CAc', '240Hz Refresh Rate, 0.03ms Response Time, HDR True Black.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitor LG OLED</h5>
+                        <p class="card-text-price">Rp 30.000.000</p>
+                        <button onclick="pesanWA('Monitor LG UltraGear Oled')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="gaming">
+                <div class="card">
+                    <img src="https://assets.goal.com/images/v3/blt9033dcb9b28c66cc/f61138da5e0a3af7c7c83b6166f1cb03dbfee30f.jpg?auto=webp&format=pjpg&width=3840&quality=60" class="card-img-top" alt="PS5"
+                         onclick="showDetail('PlayStation 5', 'Rp 9.500.000', 'https://assets.goal.com/images/v3/blt9033dcb9b28c66cc/f61138da5e0a3af7c7c83b6166f1cb03dbfee30f.jpg?auto=webp&format=pjpg&width=3840&quality=60', 'Versi Disc Edition. DualSense Controller. Ray Tracing Support.')">
+                    <div class="card-body">
+                        <h5 class="card-title">PlayStation 5</h5>
+                        <p class="card-text-price">Rp 9.500.000</p>
+                        <button onclick="pesanWA('PS5')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="gaming">
+                <div class="card">
+                    <img src="https://jagatplay.com/wp-content/uploads/2023/11/steam-deck-oled.jpg" class="card-img-top" alt="Steam Deck"
+                         onclick="showDetail('Steam Deck OLED', 'Rp 8.000.000', 'https://jagatplay.com/wp-content/uploads/2023/11/steam-deck-oled.jpg', 'Layar OLED HDR, Baterai Lebih Awet, PC Gaming dalam genggaman.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Steam Deck OLED</h5>
+                        <p class="card-text-price">Rp 8.000.000</p>
+                        <button onclick="pesanWA('Steam Deck')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="elektronik">
+                <div class="card">
+                    <img src="https://els.id/wp-content/uploads/2025/01/Gamen-Titan-7-KB.png" class="card-img-top" alt="Keyboard"
+                         onclick="showDetail('Keyboard Mechanical', 'Rp 850.000', 'https://els.id/wp-content/uploads/2025/01/Gamen-Titan-7-KB.png', 'Switch Red/Blue/Brown. RGB Backlight. Hot-swappable.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Keyboard Mechanical</h5>
+                        <p class="card-text-price">Rp 850.000</p>
+                        <button onclick="pesanWA('Keyboard Mech')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="elektronik">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHRo5Tuk9kA77SKLPZkav3F7Xi34ggn_yPMw&s" class="card-img-top" alt="Mouse"
+                         onclick="showDetail('Mouse Logitech MX', 'Rp 1.200.000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHRo5Tuk9kA77SKLPZkav3F7Xi34ggn_yPMw&s', 'Mouse Produktivitas Terbaik. Scroll Wheel Elektromagnetik. Multi-device.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Mouse Logitech MX</h5>
+                        <p class="card-text-price">Rp 1.200.000</p>
+                        <button onclick="pesanWA('Mouse Logitech')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="elektronik">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTj6k_X0kubK6NChsPVjB6pi67KTmoMm5Reg&s" class="card-img-top" alt="Headphone"
+                         onclick="showDetail('Sony WH-1000XM5', 'Rp 4.500.000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTj6k_X0kubK6NChsPVjB6pi67KTmoMm5Reg&s', 'Noise Cancelling Terbaik di Kelasnya. Baterai 30 Jam. Suara Jernih.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Sony WH-1000XM5</h5>
+                        <p class="card-text-price">Rp 4.500.000</p>
+                        <button onclick="pesanWA('Sony Headphone')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="elektronik">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZf3-DyADBvaNmphZbUcPLaB38IeTDReUGyQ&s" class="card-img-top" alt="Smartwatch"
+                         onclick="showDetail('Samsung Watch 6', 'Rp 3.500.000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZf3-DyADBvaNmphZbUcPLaB38IeTDReUGyQ&s', 'Monitor Kesehatan Lengkap (EKG, Tekanan Darah). Layar Sapphire Crystal.')">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Watch 6</h5>
+                        <p class="card-text-price">Rp 3.500.000</p>
+                        <button onclick="pesanWA('Samsung Watch')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 produk-item" data-kat="elektronik">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqCNncL6ltzgeXXmQDx6YgCbIijerMuQrqg&s" class="card-img-top" alt="GoPro"
+                         onclick="showDetail('GoPro Hero 12', 'Rp 6.000.000', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqCNncL6ltzgeXXmQDx6YgCbIijerMuQrqg&s', 'Kamera Aksi Tahan Air. Stabilisasi HyperSmooth 6.0. Rekam Video 5.3K.')">
+                    <div class="card-body">
+                        <h5 class="card-title">GoPro Hero 12</h5>
+                        <p class="card-text-price">Rp 6.000.000</p>
+                        <button onclick="pesanWA('GoPro Hero 12')" class="btn btn-outline-primary w-100 btn-sm mt-auto-custom">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-black py-4 mt-5 border-top border-secondary text-center text-muted">
+        <p class="mb-0">&copy; 2025 Nexus Store.</p>
+    </footer>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> 
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img id="modal-img" src="" class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        </div>
+                        <div class="col-md-6 p-4 d-flex flex-column">
+                            <h3 id="modal-title" class="fw-bold mb-2"></h3>
+                            <h4 id="modal-price" class="text-primary fw-bold mb-4"></h4>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-white border-bottom border-secondary pb-2 mb-2">Spesifikasi Singkat:</h6>
+                                <p id="modal-desc" class="text-muted small lh-lg"></p>
+                            </div>
+
+                            <button id="modal-wa-btn" class="btn btn-primary w-100 mt-auto fw-bold py-2">
+                                <i class="fa-brands fa-whatsapp me-2"></i> Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
