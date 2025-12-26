@@ -78,7 +78,7 @@ Berikut adalah dokumentasi tampilan website pada berbagai *breakpoint* perangkat
 ### Halaman Katalog & Modal
 | Desktop View | Tablet View | Mobile View |
 | :---: | :---: | :---: |
-| ![Katalog Desktop](docs/img/Desktop.png) | ![Katalog Tablet](docs/img/Tablet.png) | ![Katalog HP](docs/img/HP.png) |
+| ![Katalog Desktop](img/Desktop.png) | ![Katalog Tablet](img/Tablet.png) | ![Katalog HP](img/HP.png) |
 
 *(Catatan: Gambar tersimpan dalam folder `docs/img/`)*
 
